@@ -1,5 +1,5 @@
 fastapi==0.109.2
 uvicorn==0.27.1
-yt-dlp==2024.3.10
+yt-dlp>=2026.01.01
 mutagen==1.47.0
 httpx==0.26.0
