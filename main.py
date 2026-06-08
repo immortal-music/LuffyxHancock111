@@ -67,6 +67,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="ArtistBots API", lifespan=lifespan)
 
 @app.get("/", response_class=HTMLResponse)
+@app.head("/", response_class=HTMLResponse)
 async def index():
     # Landing Page UI
     return """
