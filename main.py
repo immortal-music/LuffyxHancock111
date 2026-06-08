@@ -234,3 +234,10 @@ async def refresh_cookies(api_key: str = Query(None)):
     if success:
         return {"status": "success", "message": "Cookies refreshed successfully!"}
     raise HTTPException(status_code=500, detail="Failed to refresh cookies from Pastebin")
+
+if __name__ == "__main__":
+    import uvicorn
+    # Render ကနေ ပေးမယ့် PORT ကို ယူပါမယ်၊ မရှိရင် 8000 ကို သုံးပါမယ်
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
+
