@@ -40,7 +40,8 @@ async def download_media(
     ydl_opts = {
         'outtmpl': f'{DOWNLOAD_DIR}/%(id)s.%(ext)s',
         'format': 'bestaudio[ext=m4a]/bestaudio/best' if is_audio else 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best',
-        'quiet': True,
+        'quiet': False,
+        'username': 'oauth2',
         'no_warnings': True,
         'noplaylist': True,
         'geo_bypass': True,
